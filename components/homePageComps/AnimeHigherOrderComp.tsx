@@ -1,11 +1,11 @@
 import { Box } from "@mui/system";
 import React from "react";
 import AnimeCard from "./AnimeCard";
-import AnimeOne from "../../assets/svg/saly-1.svg";
-import AnimeTwo from "../../assets/svg/saly-2.svg";
-import AnimeThree from "../../assets/svg/saly-8.svg";
-import AnimeFour from "../../assets/svg/saly-10.svg";
-import AnimeFive from "../../assets/svg/saly-12.svg";
+import AnimeOne from "../../assets/png/saly-1.png";
+import AnimeTwo from "../../assets/png/saly-2.png";
+import AnimeThree from "../../assets/png/saly-12.png";
+import AnimeFour from "../../assets/png/saly-19.png";
+import AnimeFive from "../../assets/png/saly-22.png";
 
 const AnimeHigherOrderComp = () => {
   return (
