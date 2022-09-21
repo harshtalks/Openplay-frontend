@@ -1,3 +1,20 @@
+
+# Mangaverse
+### Internship Task for Kite India Frontend
+
+Technology Used:
+- Typescript
+- MUI 
+- Next.js
+- ReactJs 
+- Vercel (Hosting)
+- Git (version control)
+- Anime API (provided upfront by the internship people <3)
+
+## Running live
+
+Project is available online on [mangaverse](https://mangaverse-kite-task.vercel.app/)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
