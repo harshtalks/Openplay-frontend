@@ -20,6 +20,9 @@ const Header = () => {
       >
         <Box>
           <Button
+            onClick={() => {
+              router.push("/");
+            }}
             sx={{ textTransform: "uppercase", letterSpacing: ".25em" }}
             size="large"
           >
