@@ -1,6 +1,5 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import Card from "./Card";
 import ConnectWallet from "./ConnectWallet";
 import EtherscanCard from "./EtherscanCard";
 import FaucetCard from "./FaucetCard";

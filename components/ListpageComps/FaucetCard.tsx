@@ -37,7 +37,14 @@ const FaucetCard = () => {
         given below. It will take you to manually verified faucet website for
         the goerli testnet.
       </Typography>
-      <Button variant="outlined">Faucet Link</Button>
+      <Button
+        onClick={() => {
+          window.open("https://faucets.chain.link/", "_blank");
+        }}
+        variant="outlined"
+      >
+        Faucet Link
+      </Button>
     </Box>
   );
 };

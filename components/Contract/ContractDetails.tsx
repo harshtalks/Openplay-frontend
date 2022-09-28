@@ -182,7 +182,16 @@ const ContractDetailsCard = () => {
         <Typography fontWeight={"800"} sx={{ mb: 1 }} variant="body1">
           All the necessary Info of the contract.
         </Typography>
-        <Button>goerli.etherscan.io</Button>
+        <Button
+          onClick={() => {
+            window.open(
+              "https://goerli.etherscan.io/address/" + address + "#code",
+              "_blank"
+            );
+          }}
+        >
+          goerli.etherscan.io
+        </Button>
       </Box>
       <Box
         sx={{
@@ -195,9 +204,9 @@ const ContractDetailsCard = () => {
         <Typography fontWeight={"800"} sx={{ mb: 1 }} variant="body1">
           Contract Address
         </Typography>
-        <Typography sx={{ mb: 1 }} variant="body1">
+        <Button size="large" sx={{ mb: 1 }} color="secondary">
           {address}
-        </Typography>
+        </Button>
       </Box>
     </Box>
   );

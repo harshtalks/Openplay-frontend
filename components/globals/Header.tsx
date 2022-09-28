@@ -32,8 +32,9 @@ const Header = () => {
         <Stack direction={"row"} spacing={5}>
           <Button
             onClick={() => {
-              router.push(
-                "https://www.linkedin.com/in/harsh-pareek-3ab671179/"
+              window.open(
+                "https://www.linkedin.com/in/harsh-pareek-3ab671179/",
+                "_blank"
               );
             }}
             startIcon={<LinkedInIcon fontSize="small" />}
@@ -43,8 +44,9 @@ const Header = () => {
           </Button>
           <Button
             onClick={() => {
-              router.push(
-                "https://github.com/harshtalks/mangaverse-kite-task.git"
+              window.open(
+                "https://github.com/harshtalks/Openplay-frontend",
+                "_blank"
               );
             }}
             size="small"

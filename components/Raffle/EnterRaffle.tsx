@@ -143,6 +143,12 @@ const EnterRaffle = ({ userAddress }: { userAddress: string }) => {
               Hash of the transaction
             </Typography>
             <Button
+              onClick={() => {
+                window.open(
+                  `https://goerli.etherscan.io/tx/${playerEnteredData?.hash}`,
+                  "_blank"
+                );
+              }}
               sx={{ textDecoration: "underline" }}
               size="medium"
               color="secondary"
@@ -283,6 +289,9 @@ const ConfirmationDetailWithAction = ({
         {label}
       </Typography>
       <Button
+        onClick={() => {
+          window.open(`https://goerli.etherscan.io/address/${value}`, "_blank");
+        }}
         sx={{ textDecoration: "underline" }}
         size="medium"
         color="secondary"

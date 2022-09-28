@@ -62,8 +62,9 @@ const Hero = () => {
             </Button>
             <Button
               onClick={() =>
-                router.push(
-                  "https://chandan-02.github.io/anime-facts-rest-api/"
+                window.open(
+                  "https://github.com/harshtalks/Openplay-backend",
+                  "_blank"
                 )
               }
               endIcon={<ArrowForwardIcon />}

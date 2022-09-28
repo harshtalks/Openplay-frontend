@@ -6,10 +6,9 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { SingularData } from "../../types/remoteDataTypes";
 import AddchartIcon from "@mui/icons-material/Addchart";
-const address = process.env.ADDRESS as string;
 
 const EtherscanCard = () => {
-  const router = useRouter();
+  const address = process.env.NEXT_PUBLIC_ADDRESS as string;
   return (
     <Box
       sx={{
@@ -40,8 +39,9 @@ const EtherscanCard = () => {
       </Typography>
       <Button
         onClick={() => {
-          window.location.replace(
-            `https://goerli.etherscan.io/address/${address}`
+          window.open(
+            `https://goerli.etherscan.io/address/${address}`,
+            "_blank"
           );
         }}
         variant="outlined"
