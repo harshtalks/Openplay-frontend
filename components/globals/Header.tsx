@@ -26,7 +26,7 @@ const Header = () => {
             sx={{ textTransform: "uppercase", letterSpacing: ".25em" }}
             size="large"
           >
-            mangaverse
+            openplay
           </Button>
         </Box>
         <Stack direction={"row"} spacing={5}>
@@ -36,7 +36,7 @@ const Header = () => {
                 "https://www.linkedin.com/in/harsh-pareek-3ab671179/"
               );
             }}
-            startIcon={<LinkedInIcon />}
+            startIcon={<LinkedInIcon fontSize="small" />}
             size="small"
           >
             LinkedIn
@@ -49,7 +49,7 @@ const Header = () => {
             }}
             size="small"
             sx={{ color: "#fff" }}
-            startIcon={<GitHubIcon />}
+            startIcon={<GitHubIcon fontSize="small" />}
             variant="contained"
           >
             Github Repo

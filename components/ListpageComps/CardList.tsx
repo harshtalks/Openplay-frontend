@@ -1,18 +1,22 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import { RemoteAnimeData } from "../../types/remoteDataTypes";
 import Card from "./Card";
+import ConnectWallet from "./ConnectWallet";
+import EtherscanCard from "./EtherscanCard";
+import FaucetCard from "./FaucetCard";
 
-const CardList = ({ list }: { list: RemoteAnimeData }) => {
+const CardList = () => {
   return (
-    <Grid container sx={{ justifyContent: "center", my: 3 }} spacing={3}>
-      {list?.data.map((el) => {
-        return (
-          <Grid key={el.anime_id} item>
-            <Card data={el} />
-          </Grid>
-        );
-      })}
+    <Grid container sx={{ justifyContent: "center", my: 3 }} spacing={6}>
+      <Grid item>
+        <EtherscanCard />
+      </Grid>
+      <Grid sx={{ mt: 4 }} item>
+        <ConnectWallet />
+      </Grid>
+      <Grid item>
+        <FaucetCard />
+      </Grid>
     </Grid>
   );
 };

@@ -2,8 +2,10 @@ import { Button, Typography } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import AnimeHigherOrderComp from "./AnimeHigherOrderComp";
+import AnimeHigherOrderComp from "./HeroCardsOrderComp";
 import { useRouter } from "next/router";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import Image from "next/image";
 
 const Hero = () => {
   const router = useRouter();
@@ -27,7 +29,7 @@ const Hero = () => {
             textTransform={"uppercase"}
             variant="body2"
           >
-            MANGA | ANIME
+            Web3 dapp
           </Typography>
           <Typography
             gutterBottom
@@ -35,15 +37,15 @@ const Hero = () => {
             variant="h4"
             fontWeight={800}
           >
-            All your favorite Anime and Manga in one place.
+            Decentralized Lottery Web3 App
           </Typography>
           <Typography
             textAlign={"center"}
             gutterBottom
             sx={{ width: "60%", margin: "0 auto" }}
           >
-            The world isn’t perfect. But it’s there for us, doing the best it
-            can… that’s what makes it so damn beautiful.
+            Play a completely decentralized raffle (lottery) app based on
+            Ethereum and its smart contracts without any human intervention.
           </Typography>
           <Stack
             margin={"1rem 0"}
@@ -52,11 +54,11 @@ const Hero = () => {
             spacing={3}
           >
             <Button
-              onClick={() => router.push("/list")}
-              sx={{ color: "#ffffff" }}
               variant="contained"
+              sx={{ color: "#fff" }}
+              onClick={() => router.push("/raffle")}
             >
-              Check Out List
+              Enter the Raffle
             </Button>
             <Button
               onClick={() =>
@@ -66,7 +68,7 @@ const Hero = () => {
               }
               endIcon={<ArrowForwardIcon />}
             >
-              Anime API Docs
+              Web3 Backend
             </Button>
           </Stack>
           <Box sx={{ marginTop: "4rem" }}>

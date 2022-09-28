@@ -5,9 +5,9 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { SingularData } from "../../types/remoteDataTypes";
-import AddchartIcon from "@mui/icons-material/Addchart";
+import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 
-const Card = () => {
+const FaucetCard = () => {
   const router = useRouter();
   return (
     <Box
@@ -21,11 +21,11 @@ const Card = () => {
         borderRadius: "8px",
       }}
     >
-      <Avatar sx={{ mb: 2, background: "#5BB5A2", opacity: 0.6, p: 2 }}>
-        <AddchartIcon />
+      <Avatar sx={{ mb: 2, background: "#F79AD3", opacity: 0.8, p: 2 }}>
+        <CurrencyExchangeIcon />
       </Avatar>
       <Typography fontWeight={700} sx={{ mb: 1 }} variant="h6">
-        Smart Contract
+        Need Faucets?
       </Typography>
       <Typography
         sx={{ mb: 2 }}
@@ -33,13 +33,13 @@ const Card = () => {
         fontSize={".7rem"}
         variant="body1"
       >
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas,
-        necessitatibus. Iure esse molestiae animi fugiat quidem ratione eligendi
-        quis recusandae ab facilis.
+        If you need some testnet ETH, you can get it by clicking on the button
+        given below. It will take you to manually verified faucet website for
+        the goerli testnet.
       </Typography>
-      <Button variant="outlined">Etherscan.io</Button>
+      <Button variant="outlined">Faucet Link</Button>
     </Box>
   );
 };
 
-export default Card;
+export default FaucetCard;

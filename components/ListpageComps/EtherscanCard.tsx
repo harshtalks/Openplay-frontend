@@ -6,8 +6,9 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { SingularData } from "../../types/remoteDataTypes";
 import AddchartIcon from "@mui/icons-material/Addchart";
+const address = process.env.ADDRESS as string;
 
-const Card = () => {
+const EtherscanCard = () => {
   const router = useRouter();
   return (
     <Box
@@ -21,7 +22,7 @@ const Card = () => {
         borderRadius: "8px",
       }}
     >
-      <Avatar sx={{ mb: 2, background: "#5BB5A2", opacity: 0.6, p: 2 }}>
+      <Avatar sx={{ mb: 2, background: "#A491D3", opacity: 0.8, p: 2 }}>
         <AddchartIcon />
       </Avatar>
       <Typography fontWeight={700} sx={{ mb: 1 }} variant="h6">
@@ -33,13 +34,22 @@ const Card = () => {
         fontSize={".7rem"}
         variant="body1"
       >
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas,
-        necessitatibus. Iure esse molestiae animi fugiat quidem ratione eligendi
-        quis recusandae ab facilis.
+        The smart contract used for the verification and validation of this Dapp
+        is deployed on Goerli testnet as of now. You can view the contract
+        details and implementation on Etherscan.io.
       </Typography>
-      <Button variant="outlined">Etherscan.io</Button>
+      <Button
+        onClick={() => {
+          window.location.replace(
+            `https://goerli.etherscan.io/address/${address}`
+          );
+        }}
+        variant="outlined"
+      >
+        Etherscan.io
+      </Button>
     </Box>
   );
 };
 
-export default Card;
+export default EtherscanCard;
