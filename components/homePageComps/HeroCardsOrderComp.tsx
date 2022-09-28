@@ -18,32 +18,52 @@ const AnimeHigherOrderComp = () => {
       }}
     >
       <motion.div
-        initial={{ y: 300 }}
-        animate={{ y: 0, transition: { duration: 0.5, delay: 1.4 } }}
+        initial={{ y: 500, opacity: 0 }}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: { duration: 0.5, delay: 0.9 },
+        }}
       >
         <AnimeCard bg={"#E3C79E"} icon={AnimeThree} mt="4rem" />
       </motion.div>
       <motion.div
-        initial={{ y: 300 }}
-        animate={{ y: 0, transition: { duration: 0.5, delay: 1.2 } }}
+        initial={{ y: 500, opacity: 0 }}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: { duration: 0.3, delay: 0.7 },
+        }}
       >
         <AnimeCard bg={"#485563"} icon={AnimeOne} mt="2rem" />
       </motion.div>
       <motion.div
-        initial={{ y: 300 }}
-        animate={{ y: 0, transition: { duration: 0.5, delay: 1 } }}
+        initial={{ y: 500, opacity: 0 }}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: { duration: 0.3, delay: 0.5 },
+        }}
       >
         <AnimeCard bg={"#5BB5A2"} icon={AnimeFive} mt="0" />
       </motion.div>
       <motion.div
-        initial={{ y: 300 }}
-        animate={{ y: 0, transition: { duration: 0.5, delay: 1.2 } }}
+        initial={{ y: 500, opacity: 0 }}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: { duration: 0.3, delay: 0.7 },
+        }}
       >
         <AnimeCard bg={"#485563"} icon={AnimeFour} mt="2rem" />
       </motion.div>
       <motion.div
-        initial={{ y: 300 }}
-        animate={{ y: 0, transition: { duration: 0.5, delay: 1.4 } }}
+        initial={{ y: 500, opacity: 0 }}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: { duration: 0.3, delay: 0.9 },
+        }}
       >
         <AnimeCard bg={"#E3C79E"} icon={AnimeTwo} mt="4rem" />
       </motion.div>
