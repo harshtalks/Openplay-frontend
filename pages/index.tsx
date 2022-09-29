@@ -1,16 +1,45 @@
-import { Box } from "@mui/material";
-import type { NextPage } from "next";
-import SnackBar from "../components/globals/Snackbar";
-import Hero from "../components/homePageComps/Hero";
+import { Alert, AlertTitle } from "@mui/material";
+import { Box } from "@mui/system";
+import { NextPage } from "next";
+import CardList from "../components/ListpageComps/CardList";
+import RaffleHeroSection from "../components/ListpageComps/RaffleHeroSection";
 import Layout from "../layouts/Layout";
+import ContractDetails from "../components/Contract/ContractDetails";
+import EnterRaffle from "../components/Raffle/EnterRaffle";
+import { useAccount } from "wagmi";
+import WinnerPickedEventSnackbar from "../components/Event/WinnerPicked";
+import RaffleEntered from "../components/Event/RaffleEntered";
+import RequiredLoginSnackbar from "../components/globals/RequiredLogin";
 
-const Home: NextPage = () => {
+const List: NextPage = () => {
+  const { isConnected, address } = useAccount();
+
   return (
     <Layout>
-      <Hero />
-      <SnackBar />
+      <Box sx={{ width: "70%", margin: "0 auto" }}>
+        <RaffleHeroSection />
+        <CardList />
+        <RequiredLoginSnackbar />
+        {isConnected && (
+          <>
+            <ContractDetails />
+            <EnterRaffle userAddress={address as string} />
+            <WinnerPickedEventSnackbar />
+            <RaffleEntered />
+          </>
+        )}
+      </Box>
     </Layout>
   );
 };
 
-export default Home;
+const AlertError = () => {
+  return (
+    <Alert sx={{ my: 4 }} severity="error">
+      <AlertTitle>Something Went Wrong</AlertTitle>
+      Please refresh the page or contact the admin.
+    </Alert>
+  );
+};
+
+export default List;

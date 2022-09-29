@@ -5,6 +5,7 @@ import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { useRouter } from "next/router";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const Header = () => {
   const router = useRouter();
@@ -27,6 +28,18 @@ const Header = () => {
             size="large"
           >
             openplay
+          </Button>
+          <Button
+            sx={{ ml: 2 }}
+            onClick={() =>
+              window.open(
+                "https://github.com/harshtalks/Openplay-backend",
+                "_blank"
+              )
+            }
+            endIcon={<ArrowForwardIcon />}
+          >
+            Web3 Backend
           </Button>
         </Box>
         <Stack direction={"row"} spacing={5}>

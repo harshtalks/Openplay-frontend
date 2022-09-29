@@ -9,7 +9,7 @@ const RaffleHeroSection = () => {
       <Box
         sx={{ display: "grid", justifyContent: "center", position: "relative" }}
       >
-        <Box sx={{ mt: 6 }}>
+        <Box sx={{ mt: 1 }}>
           <Typography
             textAlign={"center"}
             gutterBottom
@@ -26,6 +26,14 @@ const RaffleHeroSection = () => {
             fontWeight={800}
           >
             Decentralized Lottery Web3 App on Goerli.
+          </Typography>
+          <Typography
+            textAlign={"center"}
+            gutterBottom
+            sx={{ width: "80%", margin: "0 auto" }}
+          >
+            Play a completely decentralized raffle (lottery) app based on
+            Ethereum and its smart contracts without any human intervention.
           </Typography>
           <Alert sx={{ mt: 1 }} severity="success">
             All the transactions made by you during the game will be avaialable
