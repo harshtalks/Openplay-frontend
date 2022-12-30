@@ -87,6 +87,7 @@ const DetailCard = ({
     addressOrName: address,
     contractInterface: ContractABI,
     functionName: functionName,
+    watch: true,
   });
 
   const stringConversion = (data: ethers.utils.Result): string => {

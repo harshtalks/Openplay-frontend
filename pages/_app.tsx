@@ -9,9 +9,8 @@ import theme from "../themes/lightTheme";
 import createEmotionCache from "../cache/createEmotionCache";
 import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { WagmiConfig } from "wagmi";
-import { wagmiClient, chains } from "../Wigma/gettingStart";
 import { wagmiTheme } from "../themes/wagmiTheme";
-
+import { chains, wagmiClient } from "../wagmi/gettingStart";
 const clientSideCache = createEmotionCache();
 
 function MyApp(props: AppProps) {

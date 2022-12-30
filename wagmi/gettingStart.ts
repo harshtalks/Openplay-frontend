@@ -8,7 +8,10 @@ import { publicProvider } from "wagmi/providers/public";
 
 export const { chains, provider } = configureChains(
   [chain.goerli],
-  [alchemyProvider({ apiKey: process.env.GOERLI_RPC_URL }), publicProvider()]
+  [
+    publicProvider(),
+    alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_GOERLI_RPC_LINK }),
+  ]
 );
 
 const { connectors } = getDefaultWallets({
